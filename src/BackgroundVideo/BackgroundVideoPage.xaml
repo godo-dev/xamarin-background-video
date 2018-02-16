@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:BackgroundVideo" 
+		xmlns:controls="clr-namespace:BackgroundVideo.Controls" 
+		x:Class="BackgroundVideo.BackgroundVideoPage">
+	<Grid Padding="0" RowSpacing="0" ColumnSpacing="0">
+		<controls:Video x:Name="video" Source="Videos/Orchestra.mp4" Loop="true" 
+			HorizontalOptions="Fill" VerticalOptions="Fill" />
+		<StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20,10,10,20">
+			<Entry Placeholder="username" FontSize="Large" 
+				FontFamily="Georgia" HeightRequest="50">
+				<Entry.PlaceholderColor>
+					<OnPlatform x:TypeArguments="Color" Android="Silver" />
+				</Entry.PlaceholderColor>
+				<Entry.TextColor>
+					<OnPlatform x:TypeArguments="Color" Android="White" />
+				</Entry.TextColor>
+			</Entry>
+			<Entry Placeholder="password" FontSize="Large" 
+				FontFamily="Georgia" HeightRequest="50" IsPassword="true">
+				<Entry.PlaceholderColor>
+					<OnPlatform x:TypeArguments="Color" Android="Silver" />
+				</Entry.PlaceholderColor>
+				<Entry.TextColor>
+					<OnPlatform x:TypeArguments="Color" Android="White" />
+				</Entry.TextColor>
+			</Entry>
+			<BoxView Color="Transparent" HeightRequest="10" />
+			<Button Text="sign in" BackgroundColor="#3b5998" TextColor="#ffffff" 
+				FontSize="Large" />
+			<Button Text="sign up" BackgroundColor="#fa3c4c" TextColor="#ffffff" 
+				FontSize="Large" />
+		</StackLayout>
+	</Grid>
+</ContentPage>
